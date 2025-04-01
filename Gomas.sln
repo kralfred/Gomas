@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35919.96 d17.13
+VisualStudioVersion = 17.13.35919.96
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Sandbox", "Sandbox\Sandbox.vcxproj", "{B5AB889F-FDE0-4DB8-A6C0-A980C701DD17}"
+EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Gomas", "Gomas\Gomas.vcxproj", "{D89B1E56-A171-494A-9CBF-0A338217FA4E}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Sandbox", "Sandbox\Sandbox.vcxproj", "{B5AB889F-FDE0-4DB8-A6C0-A980C701DD17}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Testin", "Testin\Testin.vcxproj", "{D637A24F-4D49-4BFA-AE78-7DD559BE2E8B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +15,18 @@ Global
 		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D89B1E56-A171-494A-9CBF-0A338217FA4E}.Debug|x64.ActiveCfg = Debug|x64
-		{D89B1E56-A171-494A-9CBF-0A338217FA4E}.Debug|x64.Build.0 = Debug|x64
-		{D89B1E56-A171-494A-9CBF-0A338217FA4E}.Release|x64.ActiveCfg = Release|x64
-		{D89B1E56-A171-494A-9CBF-0A338217FA4E}.Release|x64.Build.0 = Release|x64
 		{B5AB889F-FDE0-4DB8-A6C0-A980C701DD17}.Debug|x64.ActiveCfg = Debug|x64
 		{B5AB889F-FDE0-4DB8-A6C0-A980C701DD17}.Debug|x64.Build.0 = Debug|x64
 		{B5AB889F-FDE0-4DB8-A6C0-A980C701DD17}.Release|x64.ActiveCfg = Release|x64
 		{B5AB889F-FDE0-4DB8-A6C0-A980C701DD17}.Release|x64.Build.0 = Release|x64
+		{D89B1E56-A171-494A-9CBF-0A338217FA4E}.Debug|x64.ActiveCfg = Debug|x64
+		{D89B1E56-A171-494A-9CBF-0A338217FA4E}.Debug|x64.Build.0 = Debug|x64
+		{D89B1E56-A171-494A-9CBF-0A338217FA4E}.Release|x64.ActiveCfg = Release|x64
+		{D89B1E56-A171-494A-9CBF-0A338217FA4E}.Release|x64.Build.0 = Release|x64
+		{D637A24F-4D49-4BFA-AE78-7DD559BE2E8B}.Debug|x64.ActiveCfg = Debug|Win32
+		{D637A24F-4D49-4BFA-AE78-7DD559BE2E8B}.Debug|x64.Build.0 = Debug|Win32
+		{D637A24F-4D49-4BFA-AE78-7DD559BE2E8B}.Release|x64.ActiveCfg = Release|x64
+		{D637A24F-4D49-4BFA-AE78-7DD559BE2E8B}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

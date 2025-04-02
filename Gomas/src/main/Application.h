@@ -11,4 +11,7 @@ namespace Gomas {
 
 		void Run();
 	};
+
+	Application* CreateApplication();
+
 }

@@ -29,5 +29,8 @@
     <ClInclude Include="src\Gomas.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\main\EntryPoint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

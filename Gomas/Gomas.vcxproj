@@ -86,6 +86,7 @@
     <ClInclude Include="src\Gomas.h" />
     <ClInclude Include="src\main\Application.h" />
     <ClInclude Include="src\main\Core.h" />
+    <ClInclude Include="src\main\EntryPoint.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

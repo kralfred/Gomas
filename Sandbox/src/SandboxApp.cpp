@@ -11,11 +11,10 @@ public:
 	}
 
 };
-int main() {
-	Sandbox* sandbox = new Sandbox();
-	sandbox->Run();
-	delete sandbox;
-	
+
+Gomas::Application* Gomas::CreateApplication() {
+	return new Sandbox();
+
 }
 
 

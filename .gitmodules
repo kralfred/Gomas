@@ -1,0 +1,3 @@
+[submodule "Gomas/external_lib/spdlog"]
+	path = Gomas/external_lib/spdlog
+	url = https://github.com/gabime/spdlog

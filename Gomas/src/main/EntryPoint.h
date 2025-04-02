@@ -11,7 +11,8 @@ int main(int argc, char** argv) {
 	Gomas::Log::Init();
 	Gomas::Log::GetClientLogger()->warn("Client logger setup");
 	Gomas::Log::GetCoreLogger()->info("Core logger setup");
-
+	GM_CLIENT_INFO("Macro cliect test");
+	GM_CORE_WARN("Macro core test");
 	auto app = Gomas::CreateApplication();
 	app->Run();
 	

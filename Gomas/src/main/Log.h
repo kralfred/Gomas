@@ -19,3 +19,15 @@ namespace Gomas {
         static std::shared_ptr<spdlog::logger> s_ClientLogger;
     };
 }
+
+#define GM_CORE_ERROR(...) ::Gomas::Log::GetCoreLogger()->error(__VA_ARGS__)
+#define GM_CORE_INFO(...) ::Gomas::Log::GetCoreLogger()->info(__VA_ARGS__)
+#define GM_CORE_TRACE(...) ::Gomas::Log::GetCoreLogger()->trace(__VA_ARGS__)
+#define GM_CORE_WARN(...) ::Gomas::Log::GetCoreLogger()->warn(__VA_ARGS__)
+#define GM_CORE_FATAL(...) ::Gomas::Log::GetCoreLogger()->fatal(__VA_ARGS__)
+
+#define GM_CLIENT_INFO(...) ::Gomas::Log::GetCoreLogger()->info(__VA_ARGS__)
+#define GM_CLIENT_TRACE(...) ::Gomas::Log::GetCoreLogger()->trace(__VA_ARGS__)
+#define GM_CLIENT_ERROR(...) ::Gomas::Log::GetCoreLogger()->error(__VA_ARGS__)
+#define GM_CLIENT_WARN(...) ::Gomas::Log::GetCoreLogger()->warn(__VA_ARGS__)
+#define GM_CLIENT_FATAL(...) ::Gomas::Log::GetCoreLogger()->fatal(__VA_ARGS__)

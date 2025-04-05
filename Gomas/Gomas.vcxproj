@@ -152,6 +152,7 @@ copy /B /Y ..\bin\Dist-windows-x86_64\Gomas\Gomas.dll ..\bin\Dist-windows-x86_64
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\main\Core\Logging\BasicFileLogger.h" />
     <ClInclude Include="src\main\Core\Logging\FileLogger.h" />
     <ClInclude Include="src\Gomas.h" />
     <ClInclude Include="src\main\Core\Application.h" />
@@ -166,6 +167,7 @@ copy /B /Y ..\bin\Dist-windows-x86_64\Gomas\Gomas.dll ..\bin\Dist-windows-x86_64
     <ClInclude Include="src\main\Core\Logging\Log.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\main\Core\Logging\BasicFileLogger.cpp" />
     <ClCompile Include="src\main\Core\Logging\FileLogger.cpp" />
     <ClCompile Include="src\main\Core\Application.cpp" />
     <ClCompile Include="src\main\Core\Logging\Log.cpp" />

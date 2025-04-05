@@ -5,20 +5,21 @@
 #include <filesystem>
 #include <string>
 #include "Log.h"
+#include "../Base.h"
 
 
 namespace Gomas {
 
-    class FileLogger {
+    class GOMAS_API FileLogger {
     public:
         FileLogger(const std::string& filename, const std::string& directory = "temp/logs/");
         ~FileLogger();
 
-        void Log(const std::string& message);
+        void LogToFile(const std::string& message);
 
     private:
         std::string GetLogFilePath(const std::string& filename);
-        std::shared_ptr<spdlog::logger> m_FileLogger;
+        bool m_Initialized;
         std::string m_LogDirectory;
     };
 

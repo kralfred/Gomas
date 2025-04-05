@@ -26,6 +26,7 @@
     <ClInclude Include="src\main\Core\KeyCodes.h" />
     <ClInclude Include="src\main\Core\MouseCodes.h" />
     <ClInclude Include="src\main\Core\Logging\FileLogger.h" />
+    <ClInclude Include="src\main\Core\Logging\BasicFileLogger.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main\Core\Application.cpp">
@@ -35,5 +36,6 @@
       <Filter>main</Filter>
     </ClCompile>
     <ClCompile Include="src\main\Core\Logging\FileLogger.cpp" />
+    <ClCompile Include="src\main\Core\Logging\BasicFileLogger.cpp" />
   </ItemGroup>
 </Project>

@@ -7,24 +7,30 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Gomas.h" />
-    <ClInclude Include="src\main\Application.h">
+    <ClInclude Include="src\main\Core\Application.h">
       <Filter>main</Filter>
     </ClInclude>
-    <ClInclude Include="src\main\Core.h">
+    <ClInclude Include="src\main\Core\Base.h">
       <Filter>main</Filter>
     </ClInclude>
-    <ClInclude Include="src\main\EntryPoint.h">
+    <ClInclude Include="src\main\Core\EntryPoint.h">
       <Filter>main</Filter>
     </ClInclude>
-    <ClInclude Include="src\main\Log.h">
+    <ClInclude Include="src\main\Core\Log.h">
       <Filter>main</Filter>
     </ClInclude>
+    <ClInclude Include="src\main\Events\ApplicationEvent.h" />
+    <ClInclude Include="src\main\Events\Event.h" />
+    <ClInclude Include="src\main\Events\KeyEvent.h" />
+    <ClInclude Include="src\main\Events\MouseEvent.h" />
+    <ClInclude Include="src\main\Core\KeyCodes.h" />
+    <ClInclude Include="src\main\Core\MouseCodes.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\main\Application.cpp">
+    <ClCompile Include="src\main\Core\Application.cpp">
       <Filter>main</Filter>
     </ClCompile>
-    <ClCompile Include="src\main\Log.cpp">
+    <ClCompile Include="src\main\Core\Log.cpp">
       <Filter>main</Filter>
     </ClCompile>
   </ItemGroup>

@@ -3,6 +3,7 @@
 #include "spdlog/spdlog.h"
 #include <memory>
 #include "spdlog/sinks/stdout_color_sinks.h"
+#include "spdlog/sinks/basic_file_sink.h"
 
 
 namespace Gomas {
@@ -13,10 +14,16 @@ namespace Gomas {
         static void Init();
         static spdlog::logger* GetCoreLogger(); 
         static spdlog::logger* GetClientLogger(); 
+        static void LogToFile(const std::string& message);
+        static void StartFileLogging(const std::string& filename, const std::string& directory = "temp/logs/");
+        static void StopFileLogging();
 
     private:
         static std::shared_ptr<spdlog::logger> s_CoreLogger;
         static std::shared_ptr<spdlog::logger> s_ClientLogger;
+        static std::shared_ptr<spdlog::sinks::basic_file_sink_mt> s_FileSink;
+        static std::string s_LogFilePath;
+        static bool s_FileLoggingEnabled;
     };
 }
 

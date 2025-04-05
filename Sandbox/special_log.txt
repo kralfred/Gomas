@@ -1,2 +1,5 @@
 [2025-04-05 20:02:55.399] [Gomas] [warning] Application is shutting down.
 [2025-04-05 20:02:55.399] [Gomas] [error] ahoj
+[2025-04-05 22:21:37.209] [Gomas] [info] Warning
+[2025-04-05 22:21:37.210] [Gomas] [warning] Application is shutting down new.
+[2025-04-05 22:21:37.210] [Gomas] [error] ahoj

@@ -20,13 +20,17 @@ int main(int argc, char** argv) {
 
 	Gomas::Log::GetCoreLogger()->info("Application started.");
 
-	Gomas::FileLogger fileLogger("special_log.txt"); // Logs to temp/logs/special_log.txt by default.
-	fileLogger.LogToFile("Warning");
+	Gomas::Log::StartFileLogging("test.txt");
+    GM_CORE_ERROR("test");
+	Gomas::Log::StopFileLogging();
 
-	Gomas::Log::GetCoreLogger()->warn("Application is shutting down.");
+	Gomas::Log::GetCoreLogger()->warn("Application is shutting down new.");
 
+	Gomas::Log::StartFileLogging("test2.txt","temp/logs/new/");
+    GM_CLIENT_INFO("second test");
+	Gomas::Log::StopFileLogging();
 
-	GM_CORE_ERROR("ahoj");
+	GM_CLIENT_INFO("third");
 
 	auto app = Gomas::CreateApplication();
 	app->Run();

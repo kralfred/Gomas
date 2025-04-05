@@ -12,11 +12,11 @@ workspace "Gomas"
 
   project "Gomas"
     location "Gomas"
-    kinf "SharedLib"
+    kind "SharedLib"
     language "C++"
 
-    targetdir("bin/" .. outputdir .. "/%{prj.name}")
-    objdir("bin/" .. outputdir .. "/%{prj.name}")
+   targetdir("bin/" .. outputdir .. "/%{prj.name}") -- Project specific subfolder
+    objdir("bin-int/" .. outputdir .. "/%{prj.name}")
 
     files
     {
@@ -24,7 +24,99 @@ workspace "Gomas"
        "%{prj.name}/src/**.cpp",
     }
 
-    include 
+    includedirs
     {
-       "%{prj.name}/external_lib/spdlog"
+       "%{prj.name}/external_lib/spdlog/include"
     }
+
+    filter "system:windows"
+    cppdialect "C++17"
+    staticruntime "On"
+    systemversion "latest"
+    defines
+    {
+       "GM_BUILD_DLL",
+       "GOMAS_API",
+       "GM_PLATFORM_WINDOWS"
+    }
+    
+    buildoptions "/utf-8"
+
+    postbuildcommands
+        {
+            -- Corrected command: create the directory first, then copy the file.
+            "if not exist \"../bin/" .. outputdir .. "/Sandbox\" mkdir \"../bin/" .. outputdir .. "/Sandbox\"",
+            ("{COPYFILE} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox/%{cfg.buildtarget.name}")
+        }
+
+    filter "configurations:Debug"
+    defines "GM_DEBUG"
+    symbols "On"
+
+        filter "configurations:Release"
+    defines "GM_RELEASE"
+    optimize "On"
+
+      filter "configurations:Dist"
+    defines "GM_DIST"
+    optimize "On"
+
+    filter 
+    {
+     "system:windows",
+     "configurations:Release"
+    }
+    buildoptions "/MT"
+
+                              --Sandbox
+
+     project "Sandbox"
+    location "Sandbox"
+    kind "ConsoleApp"
+    language "C++"
+
+    targetdir("bin/" .. outputdir .. "/%{prj.name}")
+    objdir("bin-int/" .. outputdir .. "/%{prj.name}")
+
+    files
+    {
+       "%{prj.name}/src/**.h",
+       "%{prj.name}/src/**.cpp",
+    }
+
+    includedirs
+    {
+       "Gomas/external_lib/spdlog/include",
+       "Gomas/src"
+    }
+
+    links
+    {
+     "Gomas"
+    }
+
+    filter "system:windows"
+    cppdialect "C++17"
+    staticruntime "On"
+    systemversion "latest"
+    defines
+    {
+       "GM_BUILD_DLL",
+       "GM_PLATFORM_WINDOWS"
+    }
+     
+    buildoptions "/utf-8"
+
+    filter "configurations:Debug"
+    defines "GM_DEBUG"
+    symbols "On"
+
+        filter "configurations:Release"
+    defines "GM_RELEASE"
+    optimize "On"
+
+      filter "configurations:Dist"
+    defines "GM_DIST"
+    optimize "On"
+
+    dependson "Gomas"

@@ -4,10 +4,14 @@
 
 
 namespace Gomas {
+
+    using std::string;
+
     std::shared_ptr<spdlog::logger> Log::s_CoreLogger;
     std::shared_ptr<spdlog::logger> Log::s_ClientLogger;
     std::shared_ptr<spdlog::sinks::basic_file_sink_mt> Log::s_FileSink = nullptr;
-    std::string Log::s_LogFilePath = "temp/logs";
+    string Log::s_LogFilePath;
+    string logRootDir = "temp/logs/";
     bool Log::s_FileLoggingEnabled = false;
 
   
@@ -24,10 +28,10 @@ namespace Gomas {
     Log::Log() {}
     Log::~Log() {}
 
-    void Log::StartFileLogging(const std::string& filename, const std::string& directory) {
+    void Log::StartFileLogging(const string& filename, const string& directory) {
         try {
             std::filesystem::create_directories(directory);
-            s_LogFilePath = directory + filename;
+            s_LogFilePath = logRootDir + directory + filename;
             s_FileSink = std::make_shared<spdlog::sinks::basic_file_sink_mt>(s_LogFilePath);
             s_CoreLogger->sinks().push_back(s_FileSink);
             s_FileLoggingEnabled = true;
@@ -45,7 +49,7 @@ namespace Gomas {
         }
     }
 
-    void Log::LogToFile(const std::string& message) {
+    void Log::LogToFile(const string& message) {
         if (s_FileLoggingEnabled) {
             s_CoreLogger->info(message);
         }

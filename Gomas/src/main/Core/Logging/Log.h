@@ -7,6 +7,8 @@
 
 
 namespace Gomas {
+    
+
     class GOMAS_API Log {
     public:
         Log();
@@ -26,6 +28,7 @@ namespace Gomas {
         static bool s_FileLoggingEnabled;
     };
 }
+
 
 #define GM_CORE_ERROR(...) ::Gomas::Log::GetCoreLogger()->error(__VA_ARGS__)
 #define GM_CORE_INFO(...) ::Gomas::Log::GetCoreLogger()->info(__VA_ARGS__)

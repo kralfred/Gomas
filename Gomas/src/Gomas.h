@@ -6,5 +6,6 @@
 
 #include "stdio.h"
 
-#include "main\Core\Log.h"
+#include "main\Core\Logging\Log.h"
+#include "main\Core\Logging\FileLogger.h"
 #include "main\Core\EntryPoint.h"

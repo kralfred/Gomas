@@ -2,7 +2,8 @@
 #include <iostream>
 #ifdef GM_PLATFORM_WINDOWS
 #include "../Events/Event.h"
-#include "Log.h"
+#include "Logging/Log.h"
+
 #include "Application.h"
 
 #include <conio.h> // For _getch() on Windows
@@ -14,6 +15,10 @@ extern Gomas::Application* Gomas::CreateApplication();
 
 
 int main(int argc, char** argv) {
+
+	Gomas::Log::Init();
+
+	GM_CORE_ERROR("ahoj");
 
 	auto app = Gomas::CreateApplication();
 	app->Run();

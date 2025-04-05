@@ -16,7 +16,7 @@
     <ClInclude Include="src\main\Core\EntryPoint.h">
       <Filter>main</Filter>
     </ClInclude>
-    <ClInclude Include="src\main\Core\Log.h">
+    <ClInclude Include="src\main\Core\Logging\Log.h">
       <Filter>main</Filter>
     </ClInclude>
     <ClInclude Include="src\main\Events\ApplicationEvent.h" />
@@ -25,13 +25,15 @@
     <ClInclude Include="src\main\Events\MouseEvent.h" />
     <ClInclude Include="src\main\Core\KeyCodes.h" />
     <ClInclude Include="src\main\Core\MouseCodes.h" />
+    <ClInclude Include="src\main\Core\Logging\FileLogger.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main\Core\Application.cpp">
       <Filter>main</Filter>
     </ClCompile>
-    <ClCompile Include="src\main\Core\Log.cpp">
+    <ClCompile Include="src\main\Core\Logging\Log.cpp">
       <Filter>main</Filter>
     </ClCompile>
+    <ClCompile Include="src\main\Core\Logging\FileLogger.cpp" />
   </ItemGroup>
 </Project>

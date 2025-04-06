@@ -31,7 +31,7 @@ workspace "Gomas"
 
     filter "system:windows"
     cppdialect "C++17"
-    staticruntime "On"
+    staticruntime "Off"
     systemversion "latest"
     defines
     {
@@ -97,7 +97,7 @@ workspace "Gomas"
 
     filter "system:windows"
     cppdialect "C++17"
-    staticruntime "On"
+    staticruntime "Off"
     systemversion "latest"
     defines
     {
@@ -120,3 +120,66 @@ workspace "Gomas"
     optimize "On"
 
     dependson "Gomas"
+
+
+
+
+                                 --TESTS
+
+project "GoogleTests"
+location "GoogleTests"
+    kind "ConsoleApp"
+    language "C++"
+
+    targetdir ("bin/" .. outputdir .. "/%{prj.name}")
+    objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+
+    files {
+        "%{prj.name}/src/**.h",
+        "%{prj.name}/src/**.cpp",
+    }
+
+    includedirs {
+        "%{prj.name}/external_lib/include",
+    }
+
+        defines {
+    
+       "GM_BUILD_DLL",
+       "GM_PLATFORM_WINDOWS"
+    }
+    
+    
+
+     filter "configurations:Debug"
+        libdirs { "%{prj.name}/external_lib/lib/Debug" }
+        links { "gtestd", "gtest_maind" }
+
+    filter "configurations:Release"
+        libdirs { "%{prj.name}/external_lib/lib/Release" }
+        links { "gtest", "gtest_main" }
+
+
+
+    filter "system:windows"
+        cppdialect "C++17"
+        staticruntime "Off"
+        systemversion "latest"
+
+
+    filter "configurations:Debug"
+    defines "GM_DEBUG"
+    symbols "On"
+
+        filter "configurations:Release"
+    defines "GM_RELEASE"
+    optimize "On"
+
+      filter "configurations:Dist"
+    defines "GM_DIST"
+    optimize "On"
+
+
+      buildoptions "/utf-8"
+
+        dependson "Gomas"

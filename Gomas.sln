@@ -1,16 +1,12 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35919.96 d17.13
-MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Gomas", "Gomas\Gomas.vcxproj", "{9C86420D-089B-6ABE-D11C-0E1E3DF066EF}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Sandbox", "Sandbox\Sandbox.vcxproj", "{F4C124E3-60A1-A37E-69B9-2E55D5170AE0}"
 	ProjectSection(ProjectDependencies) = postProject
 		{9C86420D-089B-6ABE-D11C-0E1E3DF066EF} = {9C86420D-089B-6ABE-D11C-0E1E3DF066EF}
 	EndProjectSection
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GoogleTests", "GomazGoogleTests\GomazGoogleTests.vcxproj", "{ABDD6E0D-111C-41C7-AA7C-CC9F33701DB3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,17 +27,8 @@ Global
 		{F4C124E3-60A1-A37E-69B9-2E55D5170AE0}.Dist|x64.Build.0 = Dist|x64
 		{F4C124E3-60A1-A37E-69B9-2E55D5170AE0}.Release|x64.ActiveCfg = Release|x64
 		{F4C124E3-60A1-A37E-69B9-2E55D5170AE0}.Release|x64.Build.0 = Release|x64
-		{ABDD6E0D-111C-41C7-AA7C-CC9F33701DB3}.Debug|x64.ActiveCfg = Debug|x64
-		{ABDD6E0D-111C-41C7-AA7C-CC9F33701DB3}.Debug|x64.Build.0 = Debug|x64
-		{ABDD6E0D-111C-41C7-AA7C-CC9F33701DB3}.Dist|x64.ActiveCfg = Release|x64
-		{ABDD6E0D-111C-41C7-AA7C-CC9F33701DB3}.Dist|x64.Build.0 = Release|x64
-		{ABDD6E0D-111C-41C7-AA7C-CC9F33701DB3}.Release|x64.ActiveCfg = Release|x64
-		{ABDD6E0D-111C-41C7-AA7C-CC9F33701DB3}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {724CD493-6A40-4DFF-B3AD-1C8851B73E61}
 	EndGlobalSection
 EndGlobal

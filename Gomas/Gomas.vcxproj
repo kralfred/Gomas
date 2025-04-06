@@ -82,7 +82,7 @@
       <AdditionalIncludeDirectories>external_lib\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
-      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
@@ -108,7 +108,7 @@ copy /B /Y ..\bin\Debug-windows-x86_64\Gomas\Gomas.dll ..\bin\Debug-windows-x86_
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <AdditionalOptions>/utf-8 /MT %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
@@ -135,7 +135,7 @@ copy /B /Y ..\bin\Release-windows-x86_64\Gomas\Gomas.dll ..\bin\Release-windows-
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
@@ -157,12 +157,12 @@ copy /B /Y ..\bin\Dist-windows-x86_64\Gomas\Gomas.dll ..\bin\Dist-windows-x86_64
     <ClInclude Include="src\main\Core\Base.h" />
     <ClInclude Include="src\main\Core\EntryPoint.h" />
     <ClInclude Include="src\main\Core\KeyCodes.h" />
+    <ClInclude Include="src\main\Core\Logging\Log.h" />
     <ClInclude Include="src\main\Core\MouseCodes.h" />
     <ClInclude Include="src\main\Events\ApplicationEvent.h" />
     <ClInclude Include="src\main\Events\Event.h" />
     <ClInclude Include="src\main\Events\KeyEvent.h" />
     <ClInclude Include="src\main\Events\MouseEvent.h" />
-    <ClInclude Include="src\main\Core\Logging\Log.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main\Core\Application.cpp" />

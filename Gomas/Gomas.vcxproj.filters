@@ -4,34 +4,55 @@
     <Filter Include="main">
       <UniqueIdentifier>{6A7F9A7C-56B6-9B0D-FFA2-8110EBB8170F}</UniqueIdentifier>
     </Filter>
+    <Filter Include="main\Core">
+      <UniqueIdentifier>{02D6BDA6-6E40-721D-B77E-23C323285072}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main\Core\Logging">
+      <UniqueIdentifier>{9898FB47-04AF-F9DD-4D26-85FFB97BCA65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main\Events">
+      <UniqueIdentifier>{0E70AD52-7A25-2648-031A-201F6FCE1C4C}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Gomas.h" />
     <ClInclude Include="src\main\Core\Application.h">
-      <Filter>main</Filter>
+      <Filter>main\Core</Filter>
     </ClInclude>
     <ClInclude Include="src\main\Core\Base.h">
-      <Filter>main</Filter>
+      <Filter>main\Core</Filter>
     </ClInclude>
     <ClInclude Include="src\main\Core\EntryPoint.h">
-      <Filter>main</Filter>
+      <Filter>main\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\main\Core\KeyCodes.h">
+      <Filter>main\Core</Filter>
     </ClInclude>
     <ClInclude Include="src\main\Core\Logging\Log.h">
-      <Filter>main</Filter>
+      <Filter>main\Core\Logging</Filter>
     </ClInclude>
-    <ClInclude Include="src\main\Events\ApplicationEvent.h" />
-    <ClInclude Include="src\main\Events\Event.h" />
-    <ClInclude Include="src\main\Events\KeyEvent.h" />
-    <ClInclude Include="src\main\Events\MouseEvent.h" />
-    <ClInclude Include="src\main\Core\KeyCodes.h" />
-    <ClInclude Include="src\main\Core\MouseCodes.h" />
+    <ClInclude Include="src\main\Core\MouseCodes.h">
+      <Filter>main\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\main\Events\ApplicationEvent.h">
+      <Filter>main\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\main\Events\Event.h">
+      <Filter>main\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\main\Events\KeyEvent.h">
+      <Filter>main\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\main\Events\MouseEvent.h">
+      <Filter>main\Events</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main\Core\Application.cpp">
-      <Filter>main</Filter>
+      <Filter>main\Core</Filter>
     </ClCompile>
     <ClCompile Include="src\main\Core\Logging\Log.cpp">
-      <Filter>main</Filter>
+      <Filter>main\Core\Logging</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -141,6 +141,8 @@ location "GoogleTests"
 
     includedirs {
         "%{prj.name}/external_lib/include",
+        "Gomas/external_lib/spdlog/include",
+        "Gomas/src"
     }
 
         defines {
@@ -149,7 +151,9 @@ location "GoogleTests"
        "GM_PLATFORM_WINDOWS"
     }
     
-    
+        links {
+     "Gomas"
+    }
 
      filter "configurations:Debug"
         libdirs { "%{prj.name}/external_lib/lib/Debug" }
@@ -179,7 +183,8 @@ location "GoogleTests"
     defines "GM_DIST"
     optimize "On"
 
-
+      buildoptions "/MT"
       buildoptions "/utf-8"
 
-        dependson "Gomas"
+      dependson "Gomas"
+

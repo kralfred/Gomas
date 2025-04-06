@@ -3,7 +3,6 @@
 #ifdef GM_PLATFORM_WINDOWS
 #include "../Events/Event.h"
 #include "Logging/Log.h"
-#include "Logging/FileLogger.h"
 #include "Application.h"
 
 #include <conio.h> // For _getch() on Windows

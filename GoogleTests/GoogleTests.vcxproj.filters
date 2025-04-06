@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="external_lib">
+      <UniqueIdentifier>{7E7EF128-6AE1-80CD-1367-B983FFA84C50}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="external_lib\include">
+      <UniqueIdentifier>{F1435C19-DDD2-E5E2-86F1-F9DD725FF688}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="external_lib\include\gtest">
+      <UniqueIdentifier>{075F0119-F36E-ADE9-5C28-120848579C82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="external_lib\include\gtest\internal">
+      <UniqueIdentifier>{33D99F45-9F92-0AF0-28F2-24CA94AAC05F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="external_lib\include\gtest\internal\custom">
+      <UniqueIdentifier>{3D3EB5CC-29A6-7B9A-9211-90B07E989286}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{2DAB880B-99B4-887C-2230-9F7C8E38947C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\EventTests">
+      <UniqueIdentifier>{31962893-1D64-1C99-06F8-8CBFF264F8FD}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="external_lib\include\gtest\gtest-death-test.h">
+      <Filter>external_lib\include\gtest</Filter>
+    </ClInclude>
+    <ClInclude Include="external_lib\include\gtest\gtest-message.h">
+      <Filter>external_lib\include\gtest</Filter>
+    </ClInclude>
+    <ClInclude Include="external_lib\include\gtest\gtest-param-test.h">
+      <Filter>external_lib\include\gtest</Filter>
+    </ClInclude>
+    <ClInclude Include="external_lib\include\gtest\gtest-printers.h">
+      <Filter>external_lib\include\gtest</Filter>
+    </ClInclude>
+    <ClInclude Include="external_lib\include\gtest\gtest-spi.h">
+      <Filter>external_lib\include\gtest</Filter>
+    </ClInclude>
+    <ClInclude Include="external_lib\include\gtest\gtest-test-part.h">
+      <Filter>external_lib\include\gtest</Filter>
+    </ClInclude>
+    <ClInclude Include="external_lib\include\gtest\gtest-typed-test.h">
+      <Filter>external_lib\include\gtest</Filter>
+    </ClInclude>
+    <ClInclude Include="external_lib\include\gtest\gtest.h">
+      <Filter>external_lib\include\gtest</Filter>
+    </ClInclude>
+    <ClInclude Include="external_lib\include\gtest\gtest_pred_impl.h">
+      <Filter>external_lib\include\gtest</Filter>
+    </ClInclude>
+    <ClInclude Include="external_lib\include\gtest\gtest_prod.h">
+      <Filter>external_lib\include\gtest</Filter>
+    </ClInclude>
+    <ClInclude Include="external_lib\include\gtest\internal\custom\gtest-port.h">
+      <Filter>external_lib\include\gtest\internal\custom</Filter>
+    </ClInclude>
+    <ClInclude Include="external_lib\include\gtest\internal\custom\gtest-printers.h">
+      <Filter>external_lib\include\gtest\internal\custom</Filter>
+    </ClInclude>
+    <ClInclude Include="external_lib\include\gtest\internal\custom\gtest.h">
+      <Filter>external_lib\include\gtest\internal\custom</Filter>
+    </ClInclude>
+    <ClInclude Include="external_lib\include\gtest\internal\gtest-death-test-internal.h">
+      <Filter>external_lib\include\gtest\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="external_lib\include\gtest\internal\gtest-filepath.h">
+      <Filter>external_lib\include\gtest\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="external_lib\include\gtest\internal\gtest-internal.h">
+      <Filter>external_lib\include\gtest\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="external_lib\include\gtest\internal\gtest-linked_ptr.h">
+      <Filter>external_lib\include\gtest\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="external_lib\include\gtest\internal\gtest-param-util-generated.h">
+      <Filter>external_lib\include\gtest\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="external_lib\include\gtest\internal\gtest-param-util.h">
+      <Filter>external_lib\include\gtest\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="external_lib\include\gtest\internal\gtest-port-arch.h">
+      <Filter>external_lib\include\gtest\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="external_lib\include\gtest\internal\gtest-port.h">
+      <Filter>external_lib\include\gtest\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="external_lib\include\gtest\internal\gtest-string.h">
+      <Filter>external_lib\include\gtest\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="external_lib\include\gtest\internal\gtest-tuple.h">
+      <Filter>external_lib\include\gtest\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="external_lib\include\gtest\internal\gtest-type-util.h">
+      <Filter>external_lib\include\gtest\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="src\EventTests\TestEvent.h">
+      <Filter>src\EventTests</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pch.h">
+      <Filter>src</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\EventTests\TestE.cpp">
+      <Filter>src\EventTests</Filter>
+    </ClCompile>
+    <ClCompile Include="src\EventTests\TestEvent.cpp">
+      <Filter>src\EventTests</Filter>
+    </ClCompile>
+    <ClCompile Include="src\pch.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\test.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

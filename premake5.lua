@@ -135,8 +135,8 @@ location "GoogleTests"
     objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
     files {
-        "%{prj.name}/src/**.h",
-        "%{prj.name}/src/**.cpp",
+        "%{prj.name}/**.h",
+        "%{prj.name}/**.cpp",
     }
 
     includedirs {

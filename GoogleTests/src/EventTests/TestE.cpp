@@ -1,21 +1,24 @@
-#include "TestEvent.h"
-#include "gtest/gtest.h"
+#pragma once
 
+#include "gtest/gtest.h"
+#include "TestEvent.h"
+#include <string>
+#include <iostream>
 
 namespace Gomas {
 
-    TEST(EventTest, TestEventCreation) {
+    static TEST(EventTest, TestEventCreation) {
         TestEvent testEvent(42);
 
-        EXPECT_EQ(testEvent.GetValue(), 42);
-        EXPECT_EQ(TestEvent::GetStaticTestType(), TestEvent::TestEventType::Test);
+        EXPECT_EQ(testEvent.GetValue(), 5);
+        EXPECT_EQ(TestEvent::GetStaticTestType(), TestEvent::TestEventType::Test); // Corrected line
         EXPECT_STREQ(testEvent.GetName(), "Test");
         EXPECT_TRUE(testEvent.IsInCategory(EventCategory::EventCategoryApplication));
         EXPECT_FALSE(testEvent.IsInCategory(EventCategory::EventCategoryInput));
         EXPECT_EQ(testEvent.ToString(), "TestEvent: 42");
     }
 
-    TEST(EventTest, EventDispatcherTest) {
+    static TEST(EventTest, EventDispatcherTest) {
         TestEvent testEvent(100);
         EventDispatcher dispatcher(testEvent);
 

@@ -1,6 +1,8 @@
 #pragma once
 
 #include "main/Events/Event.h"
+#include <string>
+#include <iostream>
 
 namespace Gomas {
 
@@ -13,7 +15,8 @@ namespace Gomas {
 
         enum class TestEventType { Test };
         static TestEventType GetStaticTestType() { return TestEventType::Test; }
-        virtual EventType GetEventType() const override { return EventType::None; } //Use None as a default, we will test the static test type instead.
+        static EventType GetStaticType() { return EventType::None; }
+        virtual EventType GetEventType() const override { return EventType::None; } 
         virtual const char* GetName() const override { return "Test"; }
         EVENT_CLASS_CATEGORY(EventCategory::EventCategoryApplication)
 

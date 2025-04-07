@@ -22,6 +22,12 @@
     <Filter Include="src\EventTests">
       <UniqueIdentifier>{31962893-1D64-1C99-06F8-8CBFF264F8FD}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\EventTests\KeyBoard">
+      <UniqueIdentifier>{B1413CAF-1D79-8446-2683-E8699239AB3F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="thirdparty">
+      <UniqueIdentifier>{50A5DA7C-3C5D-1CCA-A564-F525913BB7BA}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="external_lib\include\gtest\gtest-death-test.h">
@@ -96,25 +102,39 @@
     <ClInclude Include="external_lib\include\gtest\internal\gtest-type-util.h">
       <Filter>external_lib\include\gtest\internal</Filter>
     </ClInclude>
-    <ClInclude Include="src\EventTests\TestEvent.h">
+    <ClInclude Include="src\EventTests\EventMock.h">
       <Filter>src\EventTests</Filter>
     </ClInclude>
-    <ClInclude Include="src\pch.h">
+    <ClInclude Include="src\EventTests\KeyBoard\KeyCodeMock.h">
+      <Filter>src\EventTests\KeyBoard</Filter>
+    </ClInclude>
+    <ClInclude Include="src\testpch.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\EventTests\EventMock.cpp">
+      <Filter>src\EventTests</Filter>
+    </ClCompile>
     <ClCompile Include="src\EventTests\TestE.cpp">
       <Filter>src\EventTests</Filter>
     </ClCompile>
-    <ClCompile Include="src\EventTests\TestEvent.cpp">
-      <Filter>src\EventTests</Filter>
-    </ClCompile>
-    <ClCompile Include="src\pch.cpp">
+    <ClCompile Include="src\testpch.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\test.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="thirdparty\.signature.p7s">
+      <Filter>thirdparty</Filter>
+    </None>
+    <None Include="thirdparty\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.7.nupkg">
+      <Filter>thirdparty</Filter>
+    </None>
+    <None Include="thirdparty\ThirdPartyNotices.txt">
+      <Filter>thirdparty</Filter>
+    </None>
+    <None Include="thirdparty\license (MIT).txt">
+      <Filter>thirdparty</Filter>
+    </None>
   </ItemGroup>
 </Project>

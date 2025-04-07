@@ -1,9 +1,11 @@
-#pragma once
+
+#include "testpch.h" 
 
 #include "gtest/gtest.h"
-#include "TestEvent.h"
+#include "EventMock.h"
 #include <string>
 #include <iostream>
+
 
 namespace Gomas {
 

@@ -76,7 +76,8 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>testpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>GM_BUILD_DLL;GM_PLATFORM_WINDOWS;GM_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>external_lib\include;..\Gomas\external_lib\spdlog\include;..\Gomas\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -95,7 +96,8 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>testpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>GM_BUILD_DLL;GM_PLATFORM_WINDOWS;GM_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>external_lib\include;..\Gomas\external_lib\spdlog\include;..\Gomas\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -118,7 +120,8 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">
     <ClCompile>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>testpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>GM_BUILD_DLL;GM_PLATFORM_WINDOWS;GM_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>external_lib\include;..\Gomas\external_lib\spdlog\include;..\Gomas\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -163,14 +166,22 @@
     <ClInclude Include="external_lib\include\gtest\internal\gtest-string.h" />
     <ClInclude Include="external_lib\include\gtest\internal\gtest-tuple.h" />
     <ClInclude Include="external_lib\include\gtest\internal\gtest-type-util.h" />
-    <ClInclude Include="src\EventTests\TestEvent.h" />
-    <ClInclude Include="src\pch.h" />
+    <ClInclude Include="src\EventTests\EventMock.h" />
+    <ClInclude Include="src\EventTests\KeyBoard\KeyCodeMock.h" />
+    <ClInclude Include="src\testpch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\EventTests\EventMock.cpp" />
     <ClCompile Include="src\EventTests\TestE.cpp" />
-    <ClCompile Include="src\EventTests\TestEvent.cpp" />
-    <ClCompile Include="src\pch.cpp" />
-    <ClCompile Include="src\test.cpp" />
+    <ClCompile Include="src\testpch.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="thirdparty\.signature.p7s" />
+    <None Include="thirdparty\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.7.nupkg" />
+    <None Include="thirdparty\ThirdPartyNotices.txt" />
+    <None Include="thirdparty\license (MIT).txt" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Gomas\Gomas.vcxproj">

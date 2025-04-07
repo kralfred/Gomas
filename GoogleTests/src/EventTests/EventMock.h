@@ -1,8 +1,7 @@
-#pragma once
+
 
 #include "main/Events/Event.h"
-#include <string>
-#include <iostream>
+#pragma once
 
 namespace Gomas {
 

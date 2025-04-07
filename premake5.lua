@@ -134,9 +134,13 @@ location "GoogleTests"
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
     objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+        pchheader "testpch.h" 
+        pchsource "%{prj.name}/src/testpch.cpp" 
+
     files {
         "%{prj.name}/**.h",
         "%{prj.name}/**.cpp",
+        "%{prj.name}/thirdparty/**",
     }
 
     includedirs {

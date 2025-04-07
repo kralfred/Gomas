@@ -36,6 +36,8 @@ namespace Gomas {
                     break;
                 }
 
+                std::cout << key << "  was pressed";
+
                 // Simulate key press and release events
                 KeyPressedEvent keyPressed(static_cast<KeyCode>(key));
                 EventDispatcher keyPressedDispatcher(keyPressed);

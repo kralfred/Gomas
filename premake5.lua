@@ -8,7 +8,8 @@ workspace "Gomas"
  "Dist"
  }
 
- outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
+
+ include "Gomas/external_lib/GLFW"
 
   project "Gomas"
     location "Gomas"
@@ -26,7 +27,14 @@ workspace "Gomas"
 
     includedirs
     {
-       "%{prj.name}/external_lib/spdlog/include"
+        "%{prj.name}/src",
+       "%{prj.name}/external_lib/spdlog/include",
+       "Gomas/external_lib/GLFW"
+
+    }
+    links {
+     "GLFW",
+     "opengl32.lib"
     }
 
     filter "system:windows"

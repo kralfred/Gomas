@@ -8,6 +8,11 @@ workspace "Gomas"
  "Dist"
  }
 
+ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
+
+IncludeDir = {}
+
+IncludeDir["GLFW"] = "Gomas/external_lib/GLFW/include"
 
  include "Gomas/external_lib/GLFW"
 
@@ -19,6 +24,8 @@ workspace "Gomas"
    targetdir("bin/" .. outputdir .. "/%{prj.name}") -- Project specific subfolder
     objdir("bin-int/" .. outputdir .. "/%{prj.name}")
 
+
+
     files
     {
        "%{prj.name}/src/**.h",
@@ -29,7 +36,7 @@ workspace "Gomas"
     {
         "%{prj.name}/src",
        "%{prj.name}/external_lib/spdlog/include",
-       "Gomas/external_lib/GLFW"
+       "%{IncludeDir.GLFW}"
 
     }
     links {

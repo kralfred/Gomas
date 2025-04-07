@@ -1,3 +1,6 @@
 [submodule "Gomas/external_lib/spdlog"]
 	path = Gomas/external_lib/spdlog
 	url = https://github.com/gabime/spdlog
+[submodule "Gomas/external_lib/GLFW"]
+	path = Gomas/external_lib/GLFW
+	url = https://github.com/TheCherno/GLFW

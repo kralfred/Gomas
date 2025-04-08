@@ -46,6 +46,7 @@
     <ClInclude Include="src\main\Events\MouseEvent.h">
       <Filter>main\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\main\Window\Window.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main\Core\Application.cpp">

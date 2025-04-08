@@ -12,7 +12,7 @@ namespace Gomas {
     static TEST(EventTest, TestEventCreation) {
         TestEvent testEvent(42);
 
-        EXPECT_EQ(testEvent.GetValue(), 5);
+        EXPECT_EQ(testEvent.GetValue(), 42);
         EXPECT_EQ(TestEvent::GetStaticTestType(), TestEvent::TestEventType::Test); // Corrected line
         EXPECT_STREQ(testEvent.GetName(), "Test");
         EXPECT_TRUE(testEvent.IsInCategory(EventCategory::EventCategoryApplication));

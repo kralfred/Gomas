@@ -13,6 +13,7 @@
 #include "../Events/MouseEvent.h"
 #include <GLFW/glfw3.h>
 #include "main/Window/GLFW/GLFWWindow.h"
+#include "tgaimage.h"
 
 
 namespace Gomas {
@@ -25,13 +26,23 @@ namespace Gomas {
 
 	}
 
+    const TGAColor white = TGAColor(255, 255, 255, 255);
+    const TGAColor red = TGAColor(255, 0, 0, 255);
+
 	void Application::Run()
 	{
 
+
+
+
+        TGAImage image(1000, 1000, TGAImage::RGB);
+        image.set(52, 41, red);
+        image.write_tga_file("output.tga"); 
+
         
-        Gomas::WindowProps* main = new Gomas::WindowProps("Main", 600,800);
-        Gomas::WindowProps& mainref = *main;
-        Gomas::GLFWWindow::Create(mainref);
+        TGAImage image2(1000, 1000, TGAImage::RGB);
+        image2.set(52, 41, red);
+        image2.write_tga_file("output.tga");
 
         std::cout << "Press keys and mouse buttons to generate events (press ESC to exit)." << std::endl;
 

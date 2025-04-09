@@ -36,7 +36,8 @@ IncludeDir["GLFW"] = "Gomas/external_lib/GLFW/include"
     {
         "%{prj.name}/src",
        "%{prj.name}/external_lib/spdlog/include",
-       "%{IncludeDir.GLFW}"
+       "%{IncludeDir.GLFW}",
+       "%{prj.name}/external_lib/tinyrenderer",
 
     }
     links {

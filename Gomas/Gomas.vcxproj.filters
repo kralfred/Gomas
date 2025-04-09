@@ -13,6 +13,12 @@
     <Filter Include="main\Events">
       <UniqueIdentifier>{0E70AD52-7A25-2648-031A-201F6FCE1C4C}</UniqueIdentifier>
     </Filter>
+    <Filter Include="main\Window">
+      <UniqueIdentifier>{11D1C37B-7D86-3C71-067B-3648722F3375}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main\Window\GLFW">
+      <UniqueIdentifier>{F0DEF0FE-DCD7-0F51-050A-F5D5F161EF5C}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Gomas.h" />
@@ -46,8 +52,13 @@
     <ClInclude Include="src\main\Events\MouseEvent.h">
       <Filter>main\Events</Filter>
     </ClInclude>
-    <ClInclude Include="src\main\Window\Window.h" />
-    <ClInclude Include="src\main\Window\GLFW\GLFWWindow.h" />
+    <ClInclude Include="src\main\Window\GLFW\GLFWWindow.h">
+      <Filter>main\Window\GLFW</Filter>
+    </ClInclude>
+    <ClInclude Include="src\main\Window\Window.h">
+      <Filter>main\Window</Filter>
+    </ClInclude>
+    <ClInclude Include="external_lib\tinyrenderer\tgaimage.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main\Core\Application.cpp">
@@ -56,6 +67,13 @@
     <ClCompile Include="src\main\Core\Logging\Log.cpp">
       <Filter>main\Core\Logging</Filter>
     </ClCompile>
-    <ClCompile Include="src\main\Window\GLFW\GLFWWindow.cpp" />
+    <ClCompile Include="src\main\Window\GLFW\GLFWWindow.cpp">
+      <Filter>main\Window\GLFW</Filter>
+    </ClCompile>
+    <ClCompile Include="external_lib\tinyrenderer\main.cpp" />
+    <ClCompile Include="external_lib\tinyrenderer\tgaimage.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="external_lib\tinyrenderer\Makefile" />
   </ItemGroup>
 </Project>

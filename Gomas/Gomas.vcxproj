@@ -79,7 +79,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>GM_BUILD_DLL;GOMAS_API;GM_PLATFORM_WINDOWS;GM_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;external_lib\spdlog\include;external_lib\GLFW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;external_lib\spdlog\include;external_lib\GLFW\include;external_lib\tinyrenderer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -103,7 +103,7 @@ copy /B /Y ..\bin\Debug-windows-x86_64\Gomas\Gomas.dll ..\bin\Debug-windows-x86_
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>GM_BUILD_DLL;GOMAS_API;GM_PLATFORM_WINDOWS;GM_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;external_lib\spdlog\include;external_lib\GLFW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;external_lib\spdlog\include;external_lib\GLFW\include;external_lib\tinyrenderer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -131,7 +131,7 @@ copy /B /Y ..\bin\Release-windows-x86_64\Gomas\Gomas.dll ..\bin\Release-windows-
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>GM_BUILD_DLL;GOMAS_API;GM_PLATFORM_WINDOWS;GM_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;external_lib\spdlog\include;external_lib\GLFW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;external_lib\spdlog\include;external_lib\GLFW\include;external_lib\tinyrenderer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -155,6 +155,7 @@ copy /B /Y ..\bin\Dist-windows-x86_64\Gomas\Gomas.dll ..\bin\Dist-windows-x86_64
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="external_lib\tinyrenderer\tgaimage.h" />
     <ClInclude Include="src\Gomas.h" />
     <ClInclude Include="src\main\Core\Application.h" />
     <ClInclude Include="src\main\Core\Base.h" />
@@ -170,6 +171,8 @@ copy /B /Y ..\bin\Dist-windows-x86_64\Gomas\Gomas.dll ..\bin\Dist-windows-x86_64
     <ClInclude Include="src\main\Window\Window.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="external_lib\tinyrenderer\main.cpp" />
+    <ClCompile Include="external_lib\tinyrenderer\tgaimage.cpp" />
     <ClCompile Include="src\main\Core\Application.cpp" />
     <ClCompile Include="src\main\Core\Logging\Log.cpp" />
     <ClCompile Include="src\main\Window\GLFW\GLFWWindow.cpp" />
@@ -178,6 +181,9 @@ copy /B /Y ..\bin\Dist-windows-x86_64\Gomas\Gomas.dll ..\bin\Dist-windows-x86_64
     <ProjectReference Include="external_lib\GLFW\GLFW.vcxproj">
       <Project>{154B857C-0182-860D-AA6E-6C109684020F}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="external_lib\tinyrenderer\Makefile" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

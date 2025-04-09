@@ -31,18 +31,23 @@ namespace Gomas {
 
 	void Application::Run()
 	{
+        TGAImage image2(100, 100, TGAImage::RGB);
 
+        for (size_t i = 0; i < 50; i++)
+        {
+            
+            image2.set(52, 40 + i, red);
+        }
 
+        image2.write_tga_file("output2.tga");
 
-
-        TGAImage image(1000, 1000, TGAImage::RGB);
+        TGAImage image(100, 100, TGAImage::RGB);
         image.set(52, 41, red);
+        image.set(52, 40, white);
+        image.set(52, 42, red);
+        image.set(52, 43, red);
         image.write_tga_file("output.tga"); 
 
-        
-        TGAImage image2(1000, 1000, TGAImage::RGB);
-        image2.set(52, 41, red);
-        image2.write_tga_file("output.tga");
 
         std::cout << "Press keys and mouse buttons to generate events (press ESC to exit)." << std::endl;
 

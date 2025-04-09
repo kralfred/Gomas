@@ -24,7 +24,7 @@ namespace Gomas {
 
     public:
         Window() {}
-        ~Window() {}
+        virtual ~Window() {}
 
         virtual void OnUpdate() = 0;
 

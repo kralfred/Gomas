@@ -47,6 +47,7 @@
       <Filter>main\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\main\Window\Window.h" />
+    <ClInclude Include="src\main\Window\GLFW\GLFWWindow.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main\Core\Application.cpp">
@@ -55,5 +56,6 @@
     <ClCompile Include="src\main\Core\Logging\Log.cpp">
       <Filter>main\Core\Logging</Filter>
     </ClCompile>
+    <ClCompile Include="src\main\Window\GLFW\GLFWWindow.cpp" />
   </ItemGroup>
 </Project>

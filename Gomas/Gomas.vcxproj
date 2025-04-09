@@ -166,11 +166,13 @@ copy /B /Y ..\bin\Dist-windows-x86_64\Gomas\Gomas.dll ..\bin\Dist-windows-x86_64
     <ClInclude Include="src\main\Events\Event.h" />
     <ClInclude Include="src\main\Events\KeyEvent.h" />
     <ClInclude Include="src\main\Events\MouseEvent.h" />
+    <ClInclude Include="src\main\Window\GLFW\GLFWWindow.h" />
     <ClInclude Include="src\main\Window\Window.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main\Core\Application.cpp" />
     <ClCompile Include="src\main\Core\Logging\Log.cpp" />
+    <ClCompile Include="src\main\Window\GLFW\GLFWWindow.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="external_lib\GLFW\GLFW.vcxproj">

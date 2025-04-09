@@ -41,12 +41,10 @@ namespace Gomas {
 
         image2.write_tga_file("output2.tga");
 
-        TGAImage image(100, 100, TGAImage::RGB);
-        image.set(52, 41, red);
-        image.set(52, 40, white);
-        image.set(52, 42, red);
-        image.set(52, 43, red);
-        image.write_tga_file("output.tga"); 
+
+
+        Gomas::WindowProps& Main = Gomas::WindowProps("asd", 800, 1200);
+        Gomas::GLFWWindow::Create(Main);
 
 
         std::cout << "Press keys and mouse buttons to generate events (press ESC to exit)." << std::endl;

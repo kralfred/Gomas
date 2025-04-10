@@ -13,7 +13,7 @@
 #include "../Events/MouseEvent.h"
 #include <GLFW/glfw3.h>
 #include "main/Window/GLFW/GLFWWindow.h"
-#include "tgaimage.h"
+#include "../tinyrenderer/tgaimage.h"
 
 
 namespace Gomas {

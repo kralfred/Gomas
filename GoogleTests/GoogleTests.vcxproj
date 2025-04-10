@@ -179,7 +179,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="thirdparty\.signature.p7s" />
-    <None Include="thirdparty\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.7.nupkg" />
     <None Include="thirdparty\ThirdPartyNotices.txt" />
     <None Include="thirdparty\license (MIT).txt" />
   </ItemGroup>

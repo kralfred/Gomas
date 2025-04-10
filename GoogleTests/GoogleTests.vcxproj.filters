@@ -127,9 +127,6 @@
     <None Include="thirdparty\.signature.p7s">
       <Filter>thirdparty</Filter>
     </None>
-    <None Include="thirdparty\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.7.nupkg">
-      <Filter>thirdparty</Filter>
-    </None>
     <None Include="thirdparty\ThirdPartyNotices.txt">
       <Filter>thirdparty</Filter>
     </None>

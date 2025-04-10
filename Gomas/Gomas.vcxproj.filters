@@ -58,7 +58,7 @@
     <ClInclude Include="src\main\Window\Window.h">
       <Filter>main\Window</Filter>
     </ClInclude>
-    <ClInclude Include="external_lib\tinyrenderer\tgaimage.h" />
+    <ClInclude Include="src\main\tinyrenderer\tgaimage.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main\Core\Application.cpp">
@@ -70,10 +70,10 @@
     <ClCompile Include="src\main\Window\GLFW\GLFWWindow.cpp">
       <Filter>main\Window\GLFW</Filter>
     </ClCompile>
-    <ClCompile Include="external_lib\tinyrenderer\main.cpp" />
-    <ClCompile Include="external_lib\tinyrenderer\tgaimage.cpp" />
+    <ClCompile Include="src\main\tinyrenderer\main.cpp" />
+    <ClCompile Include="src\main\tinyrenderer\tgaimage.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="external_lib\tinyrenderer\Makefile" />
+    <None Include="src\main\tinyrenderer\Makefile" />
   </ItemGroup>
 </Project>

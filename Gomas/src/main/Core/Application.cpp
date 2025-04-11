@@ -26,25 +26,20 @@ namespace Gomas {
 
 	}
 
-    const TGAColor white = TGAColor(255, 255, 255, 255);
-    const TGAColor red = TGAColor(255, 0, 0, 255);
+
 
 	void Application::Run()
 	{
-        TGAImage image2(100, 100, TGAImage::RGB);
-
-        for (size_t i = 0; i < 50; i++)
-        {
-            
-            image2.set(52, 40 + i, red);
-        }
-
-        image2.write_tga_file("output2.tga");
 
 
 
         Gomas::WindowProps& Main = Gomas::WindowProps("asd", 800, 1200);
         Gomas::GLFWWindow::Create(Main);
+
+        GLFWwindow* window = static_cast<Gomas::GLFWWindow*>(Gomas::GLFWWindow::Get())->GetNativeWindow();
+
+        // Make the OpenGL context of the window current
+        glfwMakeContextCurrent(window);
 
 
         std::cout << "Press keys and mouse buttons to generate events (press ESC to exit)." << std::endl;

@@ -8,3 +8,4 @@ To run project:
 2) run:                                          git submodule update --init --recursive
 3) build project
 4) set Sandbox project as startup project
+5) run

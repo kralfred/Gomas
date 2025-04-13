@@ -8,6 +8,7 @@ namespace Gomas {
 	public:
 		Application();
 		virtual ~Application();
+		void OnKeyPress(Gomas::Event& event);
 
 		void Run();
 	};

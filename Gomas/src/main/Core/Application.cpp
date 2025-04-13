@@ -11,6 +11,7 @@
 #include <chrono>
 #include "../Events/KeyEvent.h"
 #include "../Events/MouseEvent.h"
+#include "KeyCodes.h"
 #include <GLFW/glfw3.h>
 #include "main/Window/GLFW/GLFWWindow.h"
 #include "../tinyrenderer/tgaimage.h"
@@ -26,7 +27,14 @@ namespace Gomas {
 
 	}
 
-
+    Application::OnKeyPress(Gomas::Event& event)
+    {
+        Gomas::KeyPressedEvent& keyPressedEvent = static_cast<Gomas::KeyPressedEvent&>(event);
+        if (keyPressedEvent.GetKeyCode() == Gomas::Key::KeyCode::Space)
+        {
+            std::cout << "Space key pressed!" << std::endl;
+        }
+    }
 
 	void Application::Run()
 	{
@@ -36,10 +44,9 @@ namespace Gomas {
         Gomas::WindowProps& Main = Gomas::WindowProps("asd", 800, 1200);
         Gomas::GLFWWindow::Create(Main);
 
-        GLFWwindow* window = static_cast<Gomas::GLFWWindow*>(Gomas::GLFWWindow::Get())->GetNativeWindow();
+        
 
-        // Make the OpenGL context of the window current
-        glfwMakeContextCurrent(window);
+          
 
 
         std::cout << "Press keys and mouse buttons to generate events (press ESC to exit)." << std::endl;

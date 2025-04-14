@@ -9,3 +9,5 @@ To run project:
 3) build project
 4) set Sandbox project as startup project
 5) run
+
+6) 

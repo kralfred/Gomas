@@ -1,8 +1,39 @@
 
 #include "GLFWWindow.h"
 #include "main/Core/Logging/Log.h"
+#include "../../Core/KeyCodes.h"
 
 namespace Gomas {
+
+    KeyCode GLFWKeyToGomasKey(int keycode)
+    {
+        switch (keycode)
+        {
+        case GLFW_KEY_SPACE:        return key::Space;
+        case GLFW_KEY_APOSTROPHE:   return key::Apostrophe;
+        case GLFW_KEY_COMMA:        return key::Comma;
+        case GLFW_KEY_MINUS:        return key::Minus;
+        case GLFW_KEY_PERIOD:       return key::Period;
+        case GLFW_KEY_SLASH:        return key::Slash;
+        case GLFW_KEY_0:            return key::D0;
+        case GLFW_KEY_1:            return key::D1;
+        case GLFW_KEY_2:            return key::D2;
+        case GLFW_KEY_3:            return key::D3;
+        case GLFW_KEY_4:            return key::D4;
+        case GLFW_KEY_5:            return key::D5;
+        case GLFW_KEY_6:            return key::D6;
+        case GLFW_KEY_7:            return key::D7;
+        case GLFW_KEY_8:            return key::D8;
+        case GLFW_KEY_9:            return key::D9;
+        case GLFW_KEY_SEMICOLON:    return key::Semicolon;
+        case GLFW_KEY_EQUAL:        return key::Equal;
+        case GLFW_KEY_A:            return key::A;
+        case GLFW_KEY_B:            return key::B;
+        case GLFW_KEY_C:            return key::C;
+        default:                    return key::Unknown;
+        }
+    }
+
 
     GLFWWindow* GLFWWindow::Create(const WindowProps& props)
     {
